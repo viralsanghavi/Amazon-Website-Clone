@@ -1,67 +1,71 @@
 import React from 'react'
 import './Home.css'
 import Product from './Product'
+import { random,commerce, image } from 'faker/locale/en_IND'
+
 function Home() {
     return (
         <div className="home">
-            <img className="home__image" src="https://images-eu.ssl-images-amazon.com/images/G/02/digital/video/merch2016/Hero/Covid19/Generic/GWBleedingHero_ENG_COVIDUPDATE__XSite_1500x600_PV_en-GB._CB428684220_.jpg" alt="" />
+            <div className="home__container">
 
-            {/* produvt id,title,price,rating,image */}
-            <div className="home_row">
+                <img className="home__image" src="https://images-eu.ssl-images-amazon.com/images/G/02/digital/video/merch2016/Hero/Covid19/Generic/GWBleedingHero_ENG_COVIDUPDATE__XSite_1500x600_PV_en-GB._CB428684220_.jpg" alt="" />
 
-                <Product
-                    id='1231'
-                    title='sad'
-                    price={11.95}
-                    rating={4}
-                    image={''}
-                />
-                <Product
-                    id='1231'
-                    title='sad'
-                    price={11.95}
-                    rating={4}
-                    image={''}
-                />
+                {/* produvt id,title,price,rating,image */}
+                <div className="home__row">
+                    <Product
+                        rating={4}
+                        id={random.uuid}
+                        title={commerce.productName()}
+                        price={commerce.price()}
+                        image={random.image()}
+                    />
+                    <Product
+                        id={random.uuid}
+                        title={commerce.productName()}
+                        price={commerce.price()}
+                        image={random.image()}
+                        rating={4}
+                    />
 
+                </div>
+                <div className="home__row">
+                    <Product
+                        id={random.uuid}
+                        title={commerce.productName()}
+                        price={commerce.price()}
+                        image={random.image()}
+                        rating={4}
+                    />
+
+                    <Product
+                        id={random.uuid}
+                        title={commerce.productName()}
+                        price={commerce.price()}
+                        image={random.image()}
+                        rating={4}
+                    />
+
+                    <Product
+                        id={random.uuid}
+                        title={commerce.productName()}
+                        price={commerce.price()}
+                        image={random.image()}
+                        rating={4}
+                    />
+
+                </div>
+                <div className="home__row">
+                    <Product
+                        id={random.uuid}
+                        title={commerce.productName()}
+                        price={commerce.price()}
+                        image={random.image()}
+                        rating={4}
+                    />
+
+                </div>
+                {/* produvt id,title,price,rating,image */}
             </div>
-            <div className="home_row">
-                <Product
-                    id='1231'
-                    title='sad'
-                    price={11.95}
-                    rating={4}
-                    image={''}
-                />
-
-                <Product
-                    id='1231'
-                    title='sad'
-                    price={11.95}
-                    rating={4}
-                    image={''}
-                />
-
-                <Product
-                    id='1231'
-                    title='sad'
-                    price={11.95}
-                    rating={4}
-                    image={''}
-                />
-
-            </div>
-            <div className="home_row">
-            <Product
-                    id='1231'
-                    title='sad'
-                    price={11.95}
-                    rating={4}
-                    image={''}
-                />
-            
-            </div>
-            {/* produvt id,title,price,rating,image */}
 
         </div>
     )
